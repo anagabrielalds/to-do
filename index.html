@@ -4,11 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./modal.css">
     <title>Notas</title>
 </head>
-<body>
+<body">
     <h1>To-do list</h1>
-    <div class="blocoCompleto">
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        Digite o conteúdo:
+        </br>
+        <input type="text" name="textItem" id="textItem" value="" placeholder="Digite...">
+        <div class="botoes">
+          <button onclick="adicionarNovoItem()">OK</button>
+          <button onclick="fecharPopUp()">Fechar &times;</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="blocoCompleto" ">
         <div class="Do" ondragover="onDragOver(event);" ondrop="onDrop(event)">
           <h2>
             DO 
@@ -46,8 +61,10 @@
           <div id="item8" class="itensDone" draggable="true" ondragstart="onDragStart(event);"> Thing 8 </div>
           <div id="item9" class="itensDone" draggable="true" ondragstart="onDragStart(event);"> Thing 9 </div>
         </div>
-      </div>
-      <script src="script.js"></script>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="modal.js"></script>
 </body>
 
 </html>
