@@ -33,6 +33,9 @@ function onDrop(event) {
       event.dataTransfer.clearData();
 }
 function adicionarNovoItem(texto, elementoPai){
+  debugger
+  var elementoPai = origemClique;
+  var texto = document.getElementById("textItem");
   var elementoDo =  document.getElementsByClassName(elementoPai)[0];
   var novoItem = document.createElement("div");
   var numElementosDo = document.getElementsByClassName("itensDo").length;
@@ -44,10 +47,12 @@ function adicionarNovoItem(texto, elementoPai){
   novoItem.id = "item" + (numElementosTotal + 1);
   novoItem.draggable = true;
   novoItem.ondragstart = onDragStart;
-  novoItem.innerText = texto;
+  novoItem.innerText = texto.value;
 
   elementoDo.appendChild(novoItem);
 
+  texto.value = "";
+  fecharPopUp();
 }
 function AbrirPopUp(pai){
   alert("PopUp Aberto para digitar o texto: " + pai);
