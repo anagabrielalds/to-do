@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Notas</title>
+</head>
+<body>
+    <h1>To-do list</h1>
+    <div class="blocoCompleto">
+        <div class="Do" ondragover="onDragOver(event);" ondrop="onDrop(event)">
+          <h2>
+            DO 
+            <span class="tooltip" onclick="AbrirPopUp('Do')">
+              <span class="tooltiptext">Adicionar um item</span>
+              <img src="https://img.icons8.com/emoji/2x/plus-emoji.png" alt="Adicionar Item">
+            </span>
+          </h2>
+         
+          <div id="item1" class="itensDo" draggable="true" ondragstart="onDragStart(event);"> Thing 1 </div>
+          <div id="item2" class="itensDo" draggable="true" ondragstart="onDragStart(event);"> Thing 2 </div>
+          <div id="item3" class="itensDo" draggable="true" ondragstart="onDragStart(event);"> Thing 3 </div>
+        </div>
+        <div class="Doing" ondragover="onDragOver(event);" ondrop="onDrop(event)">
+          <h2>
+            Doing
+            <span class="tooltip" onclick="AbrirPopUp('Doing')">
+              <span class="tooltiptext">Adicionar um item</span>
+              <img src="https://img.icons8.com/emoji/2x/plus-emoji.png" alt="Adicionar Item">
+            </span>
+          </h2>
+          <div id="item4" class="itensDoing" draggable="true" ondragstart="onDragStart(event);"> Thing 4 </div>
+          <div id="item5" class="itensDoing" draggable="true" ondragstart="onDragStart(event);"> Thing 5 </div>
+          <div id="item6" class="itensDoing" draggable="true" ondragstart="onDragStart(event);"> Thing 6 </div>
+        </div>
+        <div class="Done" ondragover="onDragOver(event);" ondrop="onDrop(event)">
+          <h2>
+            Done
+            <span class="tooltip" onclick="AbrirPopUp('Done')">
+              <span class="tooltiptext">Adicionar um item</span>
+              <img src="https://img.icons8.com/emoji/2x/plus-emoji.png" alt="Adicionar Item">
+            </span>
+          </h2>
+          <div id="item7" class="itensDone" draggable="true" ondragstart="onDragStart(event);"> Thing 7 </div>
+          <div id="item8" class="itensDone" draggable="true" ondragstart="onDragStart(event);"> Thing 8 </div>
+          <div id="item9" class="itensDone" draggable="true" ondragstart="onDragStart(event);"> Thing 9 </div>
+        </div>
+      </div>
+      <script src="script.js"></script>
+</body>
+
+</html>
+<!-- 
+ondragstart: este manipulador de eventos será anexado ao nosso elemento draggable e será disparado quando um evento dragstart ocorrer.
+ondragover: este manipulador de eventos será anexado ao nosso elemento dropzone e será disparado quando um evento dragover ocorrer.
+ondrop: este manipulador de eventos será anexado ao nosso elemento dropzone e será disparado quando um evento drop ocorrer. -->
