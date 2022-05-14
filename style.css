@@ -9,6 +9,11 @@ h2, h1{
   color: white;
   text-align: center;
 }
+h3{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
 .blocoCompleto {
     border: 2px solid #DFA612;
     color: black;
